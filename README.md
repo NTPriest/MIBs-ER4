@@ -1,5 +1,6 @@
 # MIBs-ER4
-```ER4_MIBs.txt``` contain full -probably- MIB list for SNMP monitoring on **EdgeRouter 4**, with MIB names and OIDs.
+```ER4_MIBs.txt``` contain full -probably- MIB, to be specific **HOST-RESOURCES-MIB**
+(Because ER4 is cut-down Debian OS) list for SNMP monitoring on **EdgeRouter 4**, with MIB names and OIDs.
 
 Works with any NMS tool like **Nagios** (which I'm using).
 
