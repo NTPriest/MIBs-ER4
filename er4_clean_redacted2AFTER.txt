@@ -1,42 +1,13 @@
 ## DISMAN-EVENT-MIB – event automation and trigger framework for SNMP agents
 
-	DISMAN-EVENT-MIB::mteEventActions,.'_linkDown'
-	DISMAN-EVENT-MIB::mteEventComment,.'_linkDown'
-	DISMAN-EVENT-MIB::mteEventEnabled,.'_linkDown'
-	DISMAN-EVENT-MIB::mteEventEntryStatus,.'_linkDown'
-	DISMAN-EVENT-MIB::mteEventNotification,.'_linkDown'
-	DISMAN-EVENT-MIB::mteEventNotificationObjects,.'_linkDown'
-	DISMAN-EVENT-MIB::mteEventNotificationObjectsOwner,.'_linkDown'
-	DISMAN-EVENT-MIB::mteObjectsEntryStatus,.
-	DISMAN-EVENT-MIB::mteObjectsID,.
-	DISMAN-EVENT-MIB::mteObjectsIDWildcard,.
 	DISMAN-EVENT-MIB::mteResourceSampleInstanceLacks,.1.3.6.1.2.1.88.1.1.5
 	DISMAN-EVENT-MIB::mteResourceSampleInstanceMaximum,.1.3.6.1.2.1.88.1.1.2
 	DISMAN-EVENT-MIB::mteResourceSampleInstances,.1.3.6.1.2.1.88.1.1.3
 	DISMAN-EVENT-MIB::mteResourceSampleInstancesHigh,.1.3.6.1.2.1.88.1.1.4
 	DISMAN-EVENT-MIB::mteResourceSampleMinimum,.1.3.6.1.2.1.88.1.1.1
-	DISMAN-EVENT-MIB::mteTriggerBooleanComparison,.'Generate
-	DISMAN-EVENT-MIB::mteTriggerBooleanEvent,.'Generate
-	DISMAN-EVENT-MIB::mteTriggerBooleanEventOwner,.'Generate
-	DISMAN-EVENT-MIB::mteTriggerBooleanObjects,.'Generate
-	DISMAN-EVENT-MIB::mteTriggerBooleanObjectsOwner,.'Generate
-	DISMAN-EVENT-MIB::mteTriggerBooleanStartup,.'Generate
-	DISMAN-EVENT-MIB::mteTriggerBooleanValue,.'Generate
-	DISMAN-EVENT-MIB::mteTriggerComment,.'Generate
-	DISMAN-EVENT-MIB::mteTriggerContextName,.'Generate
-	DISMAN-EVENT-MIB::mteTriggerContextNameWildcard,.'Generate
-	DISMAN-EVENT-MIB::mteTriggerEnabled,.'Generate
-	DISMAN-EVENT-MIB::mteTriggerEntryStatus,.'Generate
 	DISMAN-EVENT-MIB::mteTriggerFailures,.1.3.6.1.2.1.88.1.2.1
-	DISMAN-EVENT-MIB::mteTriggerFrequency,.'Generate
-	DISMAN-EVENT-MIB::mteTriggerObjects,.'Generate
-	DISMAN-EVENT-MIB::mteTriggerObjectsOwner,.'Generate
-	DISMAN-EVENT-MIB::mteTriggerSampleType,.'Generate
-	DISMAN-EVENT-MIB::mteTriggerTargetTag,.'Generate
-	DISMAN-EVENT-MIB::mteTriggerTest,.'Generate
-	DISMAN-EVENT-MIB::mteTriggerValueID,.'Generate
-	DISMAN-EVENT-MIB::mteTriggerValueIDWildcard,.'Generate
 	DISMAN-EVENT-MIB::sysUpTimeInstance,.1.3.6.1.2.1.1.3
+
 -------------------------------<END DISMAN-EVENT-MIB>------------------------------- -
 	
 ## HOST-RESOURCES-MIB – system resource inventory: hardware, storage, processes
@@ -390,7 +361,7 @@
 	SNMPv2-MIB::sysORUpTime,.1.3.6.1.2.1.1.9.1.4
 	SNMPv2-MIB::sysObjectID,.1.3.6.1.2.1.1.2
 	SNMPv2-MIB::sysServices,.1.3.6.1.2.1.1.7
-	SNMPv2-SMI::mib-2,.1.3.6.1.2.1.3.1.1.1.N.N.N
+	SNMPv2-SMI::mib-2,.1.3.6.1.2.1.3.1.1.1[.N.N.N]
 	SNMPv2-SMI::transmission,.1.3.6.1.2.1.10.246.1.1
 -------------------------------<END SNMPv2-MIB>------------------------------- -
 
@@ -398,11 +369,11 @@
 
 	TCP-MIB::tcpActiveOpens,.1.3.6.1.2.1.6.5
 	TCP-MIB::tcpAttemptFails,.1.3.6.1.2.1.6.7
-	TCP-MIB::tcpConnLocalAddress,.1.3.6.1.2.1.6.13.1.2.X.X.X.X.22.Y.Y.Y.Y.Z
-	TCP-MIB::tcpConnLocalPort,.1.3.6.1.2.1.6.13.1.3.X.X.X.X.22.Y.Y.Y.Y.Z
-	TCP-MIB::tcpConnRemAddress,.1.3.6.1.2.1.6.13.1.4.X.X.X.X.22.Y.Y.Y.Y.Z
-	TCP-MIB::tcpConnRemPort,.1.3.6.1.2.1.6.13.1.5.X.X.X.X.22.Y.Y.Y.Y.Z
-	TCP-MIB::tcpConnState,.1.3.6.1.2.1.6.13.1.1.X.X.X.X.22.Y.Y.Y.Y.Z
+	TCP-MIB::tcpConnLocalAddress,.1.3.6.1.2.1.6.13.1.2[.X.X.X.X.]22[.Y.Y.Y.Y.Z]
+	TCP-MIB::tcpConnLocalPort,.1.3.6.1.2.1.6.13.1.3[.X.X.X.X.]22[.Y.Y.Y.Y.Z]
+	TCP-MIB::tcpConnRemAddress,.1.3.6.1.2.1.6.13.1.4[.X.X.X.X.]22[.Y.Y.Y.Y.Z]
+	TCP-MIB::tcpConnRemPort,.1.3.6.1.2.1.6.13.1.5[.X.X.X.X.]22[.Y.Y.Y.Y.Z]
+	TCP-MIB::tcpConnState,.1.3.6.1.2.1.6.13.1.1[.X.X.X.X.]22[.Y.Y.Y.Y.Z]
 	TCP-MIB::tcpConnectionProcess,.1.3.6.1.2.1.6.19.1.8.PROC_ID
 	TCP-MIB::tcpConnectionState,.1.3.6.1.2.1.6.19.1.7.STATE_ID
 	TCP-MIB::tcpCurrEstab,.1.3.6.1.2.1.6.9
