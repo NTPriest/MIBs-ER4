@@ -1,5 +1,11 @@
 # MIBs-ER4
-Whole - probably- MIB for snmp monitoring from EdgeRouter4
+Full -probably- MIB list for SNMP monitoring on **EdgeRouter 4**, with MIB names and OIDs. 
+
+Works with any NMS tool like **Nagios** (which I'm using).
+
+**Tools used:** ```snmptranslate```, ```snmpwalk```, AI (automation, sorting, correction)
+
+**Why I used AI for this?:** Well...Sorting and cleaning up ~8k MIB records manually would take forever. AI helped automate and organize everything, saving a ton of time - also correcting some records.
 
 ## Description for each ones:
 ### DISMAN-EVENT-MIB
