@@ -1,5 +1,5 @@
 # MIBs-ER4
-Full -probably- MIB list for SNMP monitoring on **EdgeRouter 4**, with MIB names and OIDs. 
+```ER4_MIBs.txt``` contain full -probably- MIB list for SNMP monitoring on **EdgeRouter 4**, with MIB names and OIDs. in 
 
 Works with any NMS tool like **Nagios** (which I'm using).
 
