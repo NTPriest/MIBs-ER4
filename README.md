@@ -1,2 +1,399 @@
 # MIBs-ER4
 Whole - probably- MIB for snmp monitoring from EdgeRouter4
+
+## Description for each ones:
+### DISMAN-EVENT-MIB
+
+- **mteEventActions** — defines which actions are executed when the event is triggered (e.g., trap, log entry, notification).
+- **mteEventComment** — a human-readable comment or description for the event.
+- **mteEventEnabled** — enables or disables the event rule.
+- **mteEventEntryStatus** — lifecycle state of the event entry (creating, active, deleting).
+- **mteEventNotification** — specifies which notification/trap should be sent when the event fires.
+- **mteEventNotificationObjects** — list of extra objects included in the notification payload.
+- **mteEventNotificationObjectsOwner** — identifies the owner of the notification-object list.
+- **mteObjectsEntryStatus** — status of an entry inside the Objects table used by triggers.
+- **mteObjectsID** — OID of the object being monitored by the trigger.
+- **mteObjectsIDWildcard** — indicates whether the monitored OID supports wildcard matching (multiple instances).
+- **mteResourceSampleInstanceLacks** — counts how many sample attempts lacked valid data (missing/failed reads).
+- **mteResourceSampleInstanceMaximum** — maximum number of sample instances allowed.
+- **mteResourceSampleInstances** — current number of active sample instances.
+- **mteResourceSampleInstancesHigh** — highest number of sample instances ever observed.
+- **mteResourceSampleMinimum** — minimum number of sample instances allowed.
+- **mteTriggerBooleanComparison** — defines the boolean comparison operator used (e.g., equal, greater).
+- **mteTriggerBooleanEvent** — links the boolean trigger to a specific event.
+- **mteTriggerBooleanEventOwner** — owner identifier for the event associated with the boolean trigger.
+- **mteTriggerBooleanObjects** — object(s) used to evaluate a boolean trigger.
+- **mteTriggerBooleanObjectsOwner** — owner of the objects referenced by the boolean trigger.
+- **mteTriggerBooleanStartup** — determines whether the boolean trigger should fire at system startup.
+- **mteTriggerBooleanValue** — cached boolean evaluation result.
+- **mteTriggerComment** — comment/description attached to a trigger.
+- **mteTriggerContextName** — identifies the context (SNMP context) in which the trigger operates.
+- **mteTriggerContextNameWildcard** — allows wildcard matching for context names.
+- **mteTriggerEnabled** — enables or disables the trigger rule.
+- **mteTriggerEntryStatus** — lifecycle state of the trigger entry.
+- **mteTriggerFailures** — counts how many times a trigger failed to execute properly.
+- **mteTriggerFrequency** — sampling frequency or evaluation interval.
+- **mteTriggerObjects** — defines the objects used by the trigger.
+- **mteTriggerObjectsOwner** — owner of the trigger’s object list.
+- **mteTriggerSampleType** — type of sample (absolute, delta, change, etc.).
+- **mteTriggerTargetTag** — specifies the target tag for notifications/actions.
+- **mteTriggerTest** — defines the test condition used by the trigger.
+- **mteTriggerValueID** — identifier for the value used by the trigger.
+- **mteTriggerValueIDWildcard** — wildcard support for value identifiers.
+- **sysUpTimeInstance** — the system uptime instance used as part of sampling or event timing.
+
+---
+### HOST-RESOURCES-MIB
+- **hrDeviceDescr** — textual description of a hardware device on the system.
+- **hrDeviceErrors** — number of errors detected on the device.
+- **hrDeviceID** — unique identifier for the device type.
+- **hrDeviceIndex** — index of the device in the host resource table.
+- **hrDeviceStatus** — operational status of the device (running, warning, down).
+- **hrDeviceType** — type of the device (disk, processor, network interface, etc.).
+- **hrFSAccess** — access permissions for a file system.
+- **hrFSBootable** — indicates if the file system is bootable.
+- **hrFSIndex** — index identifying a file system.
+- **hrFSLastFullBackupDate** — timestamp of the last full backup.
+- **hrFSLastPartialBackupDate** — timestamp of the last partial backup.
+- **hrFSMountPoint** — local mount point of the file system.
+- **hrFSRemoteMountPoint** — remote mount point, if networked.
+- **hrFSStorageIndex** — storage index associated with the file system.
+- **hrFSType** — type of the file system (ext4, NTFS, etc.).
+- **hrMemorySize** — total size of system memory in kilobytes.
+- **hrNetworkIfIndex** — index of the network interface in the host table.
+- **hrProcessorFrwID** — firmware ID of the processor.
+- **hrProcessorLoad** — current CPU load of the processor.
+- **hrSWInstalledDate** — installation date of a software package.
+- **hrSWInstalledID** — unique identifier for installed software.
+- **hrSWInstalledIndex** — index in the installed software table.
+- **hrSWInstalledName** — name of the installed software.
+- **hrSWInstalledType** — type/category of installed software.
+- **hrSWRunID** — unique identifier of a running software instance.
+- **hrSWRunIndex** — index in the running software table.
+- **hrSWRunName** — name of the running process.
+- **hrSWRunParameters** — command-line parameters of the process.
+- **hrSWRunPath** — file system path of the executable.
+- **hrSWRunPerfCPU** — CPU usage of the running process.
+- **hrSWRunPerfMem** — memory usage of the process.
+- **hrSWRunStatus** — operational status of the running process.
+- **hrSWRunType** — type of the process (application, OS process, etc.).
+- **hrStorageAllocationUnits** — allocation unit size of storage (in bytes).
+- **hrStorageDescr** — textual description of a storage entity.
+---
+
+### IF-MIB
+- **ifAdminStatus** — administrative status of the interface (up, down, testing).
+- **ifAlias** — user-assigned description or alias for the interface.
+- **ifConnectorPresent** — indicates if a physical connector is present.
+- **ifCounterDiscontinuityTime** — timestamp when counters last reset.
+- **ifDescr** — textual description of the interface.
+- **ifHCInBroadcastPkts** — number of inbound broadcast packets (high-capacity counter).
+- **ifHCInMulticastPkts** — number of inbound multicast packets (high-capacity counter).
+- **ifHCInOctets** — number of inbound octets/bytes (high-capacity counter).
+- **ifHCInUcastPkts** — number of inbound unicast packets (high-capacity counter).
+- **ifHCOutBroadcastPkts** — number of outbound broadcast packets (high-capacity counter).
+- **ifHCOutMulticastPkts** — number of outbound multicast packets (high-capacity counter).
+- **ifHCOutOctets** — number of outbound octets/bytes (high-capacity counter).
+- **ifHCOutUcastPkts** — number of outbound unicast packets (high-capacity counter).
+- **ifHighSpeed** — interface speed in Mbps (high-capacity value).
+- **ifInBroadcastPkts** — inbound broadcast packets count.
+- **ifInDiscards** — inbound packets discarded.
+- **ifInErrors** — inbound packets with errors.
+- **ifInMulticastPkts** — inbound multicast packets count.
+- **ifInNUcastPkts** — inbound non-unicast packets count.
+- **ifInOctets** — inbound octets/bytes count.
+- **ifInUcastPkts** — inbound unicast packets count.
+- **ifInUnknownProtos** — packets received for unknown protocols.
+- **ifIndex** — unique index identifying the interface.
+- **ifLastChange** — time of last state change for the interface.
+- **ifMtu** — maximum transmission unit size of the interface.
+- **ifName** — name of the interface.
+- **ifNumber** — total number of interfaces on the device.
+- **ifOperStatus** — operational status of the interface (up, down, testing).
+- **ifOutBroadcastPkts** — outbound broadcast packets count.
+- **ifOutDiscards** — outbound packets discarded.
+- **ifOutErrors** — outbound packets with errors.
+- **ifOutMulticastPkts** — outbound multicast packets count.
+- **ifOutNUcastPkts** — outbound non-unicast packets count.
+- **ifOutOctets** — outbound octets/bytes count.
+- **ifOutQLen** — length of the outbound packet queue.
+- **ifOutUcastPkts** — outbound unicast packets count.
+- **ifPhysAddress** — MAC/physical address of the int
+- 
+### IP-FORWARD-MIB
+
+- **ipCidrRouteDest** — destination IP address for the route.
+- **ipCidrRouteIfIndex** — interface index associated with this route.
+- **ipCidrRouteMask** — subnet mask for the route (CIDR-based).
+- **ipCidrRouteNextHop** — next-hop IP address for forwarding packets.
+- **ipCidrRouteNumber** — total number of CIDR routes in the table.
+- **ipCidrRouteProto** — protocol that installed the route (e.g., RIP, OSPF, static).
+- **ipCidrRouteTos** — Type of Service (TOS) value associated with the route.
+- **ipCidrRouteType** — type of route (direct, indirect, local, etc.).
+- **ipForwardNumber** — total number of IP routes on the device.
+
+---
+
+### IP-MIB
+
+- **icmpInAddrMaskReps** — number of ICMP address mask replies received.
+- **icmpInAddrMasks** — number of ICMP address mask requests received.
+- **icmpInDestUnreachs** — ICMP destination unreachable messages received.
+- **icmpInEchoReps** — ICMP echo replies received.
+- **icmpInEchos** — ICMP echo requests received.
+- **icmpInErrors** — total ICMP messages received with errors.
+- **icmpInMsgs** — total ICMP messages received.
+- **icmpInParmProbs** — ICMP parameter problem messages received.
+- **icmpInRedirects** — ICMP redirect messages received.
+- **icmpInSrcQuenchs** — ICMP source quench messages received.
+- **icmpInTimeExcds** — ICMP time exceeded messages received.
+- **icmpInTimestampReps** — ICMP timestamp replies received.
+- **icmpInTimestamps** — ICMP timestamp requests received.
+- **icmpMsgStatsInPkts** — ICMP messages stats: packets in.
+- **icmpMsgStatsOutPkts** — ICMP messages stats: packets out.
+- **icmpOutAddrMaskReps** — number of ICMP address mask replies sent.
+- **icmpOutAddrMasks** — number of ICMP address mask requests sent.
+- **icmpOutDestUnreachs** — ICMP destination unreachable messages sent.
+- **icmpOutEchoReps** — ICMP echo replies sent.
+- **icmpOutEchos** — ICMP echo requests sent.
+- **icmpOutErrors** — total ICMP messages sent with errors.
+- **icmpOutMsgs** — total ICMP messages sent.
+- **icmpOutParmProbs** — ICMP parameter problem messages sent.
+- **icmpOutRedirects** — ICMP redirect messages sent.
+- **icmpOutSrcQuenchs** — ICMP source quench messages sent.
+- **icmpOutTimeExcds** — ICMP time exceeded messages sent.
+- **icmpOutTimestampReps** — ICMP timestamp replies sent.
+- **icmpOutTimestamps** — ICMP timestamp requests sent.
+- **icmpStatsInErrors** — ICMP input error statistics.
+- **icmpStatsInMsgs** — ICMP input message statistics.
+- **icmpStatsOutErrors** — ICMP output error statistics.
+- **icmpStatsOutMsgs** — ICMP output message statistics.
+- **ip** — IP routing table entries (IPv4).
+- **ipAdEntAddr** — IP address of the host.
+- **ipAdEntBcastAddr** — broadcast address associated with IP.
+- **ipAdEntIfIndex** — interface index for the IP address.
+- **ipAdEntNetMask** — subnet mask for the IP address.
+- **ipAddressIfIndex** — interface index for an IP address (IPv6 support).
+- **ipAddressPrefixAutonomousFlag** — indicates autonomous prefix.
+- **ipAddressPrefixOnLinkFlag** — indicates prefix is on-link.
+- **ipAddressPrefixOrigin** — origin of the IP address prefix.
+- **ipDefaultTTL** — default Time To Live for outgoing IP packets.
+- **ipForwDatagrams** — total IP datagrams forwarded.
+- **ipForwarding** — indicates whether IP forwarding is enabled.
+- **ipFragCreates** — number of IP fragments created.
+- **ipFragFails** — number of IP fragmentation failures.
+- **ipFragOKs** — number of successful IP fragmentations.
+- **ipIfStatsDiscontinuityTime** — time of last discontinuity in IP interface stats.
+- **ipIfStatsHCInDelivers** — high-capacity number of IP datagrams delivered in.
+- **ipIfStatsHCInForwDatagrams** — high-capacity number of forwarded IP datagrams in.
+- **ipIfStatsHCInMcastOctets** — high-capacity incoming multicast octets.
+- **ipIfStatsHCInMcastPkts** — high-capacity incoming multicast packets.
+- **ipIfStatsHCInOctets** — high-capacity incoming octets.
+- **ipIfStatsHCInReceives** — high-capacity incoming datagrams received.
+- **ipIfStatsHCOutForwDatagrams** — high-capacity forwarded datagrams out.
+- **ipIfStatsHCOutMcastOctets** — high-capacity outgoing multicast octets.
+- **ipIfStatsHCOutMcastPkts** — high-capacity outgoing multicast packets.
+- **ipIfStatsHCOutOctets** — high-capacity outgoing octets.
+- **ipIfStatsHCOutRequests** — high-capacity outgoing requests.
+- **ipIfStatsHCOutTransmits** — high-capacity outgoing datagrams transmitted.
+- **ipIfStatsInAddrErrors** — number of IP datagrams with address errors received.
+- **ipIfStatsInDelivers** — number of IP datagrams delivered.
+- **ipIfStatsInDiscards** — number of incoming datagrams discarded.
+- **ipIfStatsInForwDatagrams** — number of incoming forwarded datagrams.
+- **ipIfStatsInHdrErrors** — number of IP datagrams with header errors received.
+- **ipIfStatsInMcastOctets** — incoming multicast octets per interface.
+- **ipIfStatsInMcastPkts** — incoming multicast packets per interface.
+- **ipIfStatsInNoRoutes** — incoming packets dropped due to no route.
+- **ipIfStatsInOctets** — total octets received per interface.
+- **ipIfStatsInReceives** — total IP datagrams received per interface.
+- **ipIfStatsInTruncatedPkts** — number of truncated incoming packets.
+- **ipIfStatsInUnknownProtos** — incoming packets with unknown protocol.
+- **ipIfStatsOutDiscards** — outgoing datagrams discarded.
+- **ipIfStatsOutForwDatagrams** — outgoing forwarded datagrams.
+- **ipIfStatsOutFragCreates** — outgoing fragmentations created.
+- **ipIfStatsOutFragFails** — outgoing fragmentation failures.
+- **ipIfStatsOutFragOKs** — outgoing successful fragmentations.
+- **ipIfStatsOutFragReqds** — outgoing fragmentations requested.
+- **ipIfStatsOutMcastOctets** — outgoing multicast octets.
+- **ipIfStatsOutMcastPkts** — outgoing multicast packets.
+- **ipIfStatsOutOctets** — outgoing octets.
+- **ipIfStatsOutRequests** — outgoing datagrams requested.
+- **ipIfStatsOutTransmits** — outgoing datagrams transmitted.
+- **ipIfStatsReasmFails** — reassembly failures.
+- **ipIfStatsReasmOKs** — successful reassemblies.
+- **ipIfStatsReasmReqds** — reassembly requests.
+- **ipIfStatsRefreshRate** — refresh rate for interface stats.
+- **ipIfStatsTableLastChange** — last change in interface stats table.
+- **ipInAddrErrors** — number of received datagrams with address errors.
+- **ipInDelivers** — number of IP datagrams delivered to upper layers.
+- **ipInDiscards** — number of received IP datagrams discarded.
+- **ipInHdrErrors** — number of received datagrams with header errors.
+- **ipInReceives** — number of IP datagrams received.
+- **ipInUnknownProtos** — number of IP datagrams received with unknown protocol.
+- **ipNetToMediaIfIndex** — interface index for ARP/neighbor mapping.
+- **ipNetToMediaNetAddress** — IP address for ARP/neighbor mapping.
+- **ipNetToMediaPhysAddress** — physical address (MAC) for IP-to-MAC mapping.
+- **ipNetToMediaType** — type of ARP/neighbor entry.
+- **ipOutDiscards** — number of outgoing datagrams discarded.
+- **ipOutNoRoutes** — outgoing packets discarded due to no route.
+- **ipOutRequests** — number of IP datagrams sent.
+- **ipReasmFails** — reassembly failures.
+- **ipReasmOKs** — successful reassemblies.
+- **ipReasmReqds** — reassembly requests.
+- **ipReasmTimeout** — reassembly timeout.
+- **ipSystemStatsDiscontinuityTime** — last change in IP system stats.
+- **ipSystemStatsHCInBcastPkts** — high-capacity incoming broadcast packets.
+- **ipSystemStatsHCInDelivers** — high-capacity delivered datagrams in.
+- **ipSystemStatsHCInForwDatagrams** — high-capacity forwarded datagrams in.
+- **ipSystemStatsHCInMcastOctets** — high-capacity incoming multicast octets.
+- **ipSystemStatsHCInMcastPkts** — high-capacity incoming multicast packets.
+- **ipSystemStatsHCInOctets** — high-capacity incoming octets.
+- **ipSystemStatsHCInReceives** — high-capacity incoming datagrams received.
+- **ipSystemStatsHCOutBcastPkts** — high-capacity outgoing broadcast packets.
+- **ipSystemStatsHCOutForwDatagrams** — high-capacity outgoing forwarded datagrams.
+- **ipSystemStatsHCOutMcastOctets** — high-capacity outgoing multicast octets.
+- **ipSystemStatsHCOutMcastPkts** — high-capacity outgoing multicast packets.
+- **ipSystemStatsHCOutOctets** — high-capacity outgoing octets.
+- **ipSystemStatsHCOutRequests** — high-capacity outgoing requests.
+- **ipSystemStatsHCOutTransmits** — high-capacity outgoing datagrams transmitted.
+- **ipSystemStatsInAddrErrors** — incoming datagrams with address errors.
+- **ipSystemStatsInBcastPkts** — incoming broadcast packets.
+- **ipSystemStatsInDelivers** — delivered datagrams in.
+- **ipSystemStatsInDiscards** — incoming datagrams discarded.
+- **ipSystemStatsInForwDatagrams** — incoming forwarded datagrams.
+- **ipSystemStatsInHdrErrors** — incoming header errors.
+- **ipSystemStatsInMcastOctets** — incoming multicast octets.
+- **ipSystemStatsInMcastPkts** — incoming multicast packets.
+- **ipSystemStatsInNoRoutes** — incoming datagrams dropped due to no route.
+- **ipSystemStatsInOctets** — incoming octets.
+- **ipSystemStatsInReceives** — received datagrams.
+- **ipSystemStatsInTruncatedPkts** — truncated packets received.
+- **ipSystemStatsInUnknownProtos** — packets with unknown protocol.
+- **ipSystemStatsOutBcastPkts** — outgoing broadcast packets.
+- **ipSystemStatsOutDiscards** — outgoing datagrams discarded.
+- **ipSystemStatsOutForwDatagrams** — outgoing forwarded datagrams.
+- **ipSystemStatsOutFragCreates** — outgoing fragmentations created.
+- **ipSystemStatsOutFragFails** — outgoing fragment failures.
+- **ipSystemStatsOutFragOKs** — successful outgoing fragmentations.
+- **ipSystemStatsOutFragReqds** — outgoing fragmentation requests.
+- **ipSystemStatsOutMcastOctets** — outgoing multicast octets.
+- **ipSystemStatsOutMcastPkts** — outgoing multicast packets.
+- **ipSystemStatsOutNoRoutes** — outgoing packets dropped due to no route.
+- **ipSystemStatsOutOctets** — outgoing octets.
+- **ipSystemStatsOutRequests** — outgoing requests.
+- **ipSystemStatsOutTransmits** — outgoing datagrams transmitted.
+- **ipSystemStatsReasmFails** — reassembly failures.
+- **ipSystemStatsReasmOKs** — successful reassemblies.
+- **ipSystemStatsReasmReqds** — reassembly requests.
+- **ipSystemStatsRefreshRate** — refresh rate for system stats.
+- **ipv6IpDefaultHopLimit** — default hop limit for IPv6 packets.
+- **ipv6IpForwarding** — indicates whether IPv6 forwarding is enabled.
+- **ipv6ScopeZoneIndex3** — zone index for IPv6 scope (3).
+- **ipv6ScopeZoneIndex6** — zone index for IPv6 scope (6).
+- **ipv6ScopeZoneIndex7** — zone index for IPv6 scope (7).
+- **ipv6ScopeZoneIndex9** — zone index for IPv6 scope (9).
+- **ipv6ScopeZoneIndexA** — zone index for IPv6 scope (A).
+- **ipv6ScopeZoneIndexAdminLocal** — zone index for Admin Local scope.
+- **ipv6ScopeZoneIndexB** — zone index for IPv6 scope (B).
+- **ipv6ScopeZoneIndexC** — zone index for IPv6 scope (C).
+- **ipv6ScopeZoneIndexD** — zone index for IPv6 scope (D).
+- **ipv6ScopeZoneIndexLinkLocal** — zone index for Link-Local scope.
+- **ipv6ScopeZoneIndexOrganizationLocal** — zone index for Organization-Local scope.
+
+### IPV6-MIB
+
+- **ipv6ScopeZoneIndexSiteLocal** — zone index for IPv6 Site-Local scope.
+- **ipv6DefaultHopLimit** — default hop limit for outgoing IPv6 packets.
+- **ipv6Forwarding** — indicates whether IPv6 forwarding is enabled.
+- **ipv6IfAdminStatus** — administrative status of the IPv6 interface (up/down/testing).
+- **ipv6IfDescr** — textual description of the IPv6 interface.
+- **ipv6IfEffectiveMtu** — effective MTU of the IPv6 interface.
+- **ipv6IfLowerLayer** — references lower-layer interface(s) associated with this IPv6 interface.
+- **ipv6IfOperStatus** — operational status of the IPv6 interface (up/down/testing).
+- **ipv6IfPhysicalAddress** — physical (MAC) address associated with the IPv6 interface.
+- **ipv6Interfaces** — total number of IPv6 interfaces on the device.
+
+### MTA-MIB
+
+- **mtaGroupHierarchy** — MTA group hierarchy structure.
+- **mtaGroupStoredMessages** — number of messages stored in the group.
+- **mtaGroupStoredVolume** — total volume of messages stored in the group.
+- **mtaStoredMessages** — total number of messages stored by the MTA.
+- **mtaStoredVolume** — total volume of all messages stored.
+
+### NOTIFICATION-LOG-MIB
+
+- **nlmConfigGlobalAgeOut** — lifespan of entries in the notification log.
+- **nlmConfigGlobalEntryLimit** — maximum number of entries in the global log.
+- **nlmStatsGlobalNotificationsBumped** — number of old notifications removed from the log.
+- **nlmStatsGlobalNotificationsLogged** — number of received notifications logged.
+
+### SNMPv2-MIB
+
+- **snmpEnableAuthenTraps** — enable/disable authentication traps.
+- **snmpInASNParseErrs** — ASN.1 parsing errors in incoming packets.
+- **snmpInBadCommunityNames** — packets with invalid community names.
+- **snmpInBadCommunityUses** — improper community usage.
+- **snmpInBadValues** — invalid values in requests.
+- **snmpInBadVersions** — packets with unsupported SNMP versions.
+- **snmpInGenErrs** — general errors in incoming SNMP packets.
+- **snmpInGetNexts** — number of received GetNext requests.
+- **snmpInGetRequests** — number of received Get requests.
+- **snmpInGetResponses** — number of received GetResponse messages.
+- **snmpInNoSuchNames** — number of noSuchName errors received.
+- **snmpInPkts** — total incoming SNMP packets.
+- **snmpInReadOnlys** — attempts to set read-only objects.
+- **snmpInSetRequests** — number of received Set requests.
+- **snmpInTooBigs** — received packets exceeding size limit.
+- **snmpInTotalReqVars** — total variables in incoming requests.
+- **snmpInTotalSetVars** — total variables in incoming Set requests.
+- **snmpInTraps** — received trap messages.
+- **snmpOutBadValues** — sent responses with bad values.
+- **snmpOutGenErrs** — general errors sent in responses.
+- **snmpOutGetNexts** — GetNext responses sent.
+- **snmpOutGetRequests** — Get request responses sent.
+- **snmpOutGetResponses** — GetResponse messages sent.
+- **snmpOutNoSuchNames** — noSuchName errors sent.
+- **snmpOutPkts** — total outgoing SNMP packets.
+- **snmpOutSetRequests** — Set request responses sent.
+- **snmpOutTooBigs** — packets sent exceeding size limits.
+- **snmpOutTraps** — traps sent.
+- **snmpProxyDrops** — SNMP proxy drops.
+- **snmpSilentDrops** — silently dropped SNMP packets.
+- **sysContact** — system contact information.
+- **sysDescr** — system description.
+- **sysLocation** — system physical location.
+- **sysName** — system name.
+- **sysORDescr** — MIB module description.
+- **sysORID** — MIB module OID.
+- **sysORLastChange** — last change time of MIB module.
+- **sysORUpTime** — uptime of MIB module.
+- **sysObjectID** — system object identifier.
+- **sysServices** — services offered by the system.
+- **SNMPv2-SMI::mib-2** — generic MIB-2 subtree.
+- **SNMPv2-SMI::transmission** — transmission subtree (Ethernet, etc.).
+
+### TCP-MIB
+
+- **tcpActiveOpens** — number of TCP connections initiated actively by this host.
+- **tcpAttemptFails** — failed attempts to establish TCP connections.
+- **tcpConnLocalAddress** — local IP address of a specific TCP connection.
+- **tcpConnLocalPort** — local port number of a specific TCP connection.
+- **tcpConnRemAddress** — remote IP address of a specific TCP connection.
+- **tcpConnRemPort** — remote port number of a specific TCP connection.
+- **tcpConnState** — current state of a specific TCP connection (e.g., ESTABLISHED, LISTEN).
+- **tcpConnectionProcess** — process ID owning a specific TCP connection.
+- **tcpConnectionState** — internal TCP state ID of a connection.
+- **tcpCurrEstab** — number of currently established TCP connections.
+- **tcpEstabResets** — number of established connections reset by this host.
+- **tcpInErrs** — number of incoming TCP segments with errors.
+- **tcpInSegs** — number of TCP segments received.
+- **tcpListenerProcess** — process ID listening on a TCP port.
+- **tcpMaxConn** — maximum number of TCP connections allowed.
+- **tcpOutRsts** — number of TCP segments sent with the RST flag.
+- **tcpOutSegs** — number of TCP segments transmitted.
+- **tcpPassiveOpens** — number of TCP connections accepted passively (as a server).
+- **tcpRetransSegs** — number of TCP segments retransmitted.
+- **tcpRtoAlgorithm** — retransmission timeout algorithm used (RFC 2988).
+- **tcpRtoMax** — maximum retransmission timeout value.
+- **tcpRtoMin** — minimum retransmission timeout value.
