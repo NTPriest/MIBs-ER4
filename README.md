@@ -5,7 +5,7 @@ Works with any NMS tool like **Nagios** (which I'm using).
 
 **Tools used:** ```snmptranslate```, ```snmpwalk```, AI (automation, sorting, correction)
 
-**Why I used AI for this?:** Well...Sorting, cleaning up and not to mention describing (knowing that documentation for those are limited or shorted) ~8k MIB records manually would take forever. 
+**Why I used AI for this?:** Well...Sorting, cleaning up and not to mention describing (knowing that documentation for those are limited or shorted especially for ER4) ~8k MIB records manually would take forever. 
 AI helped automate and organize everything, saving a ton of time - also correcting some records.
 
 **Note** 
